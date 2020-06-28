@@ -633,7 +633,7 @@ class Game:
                             skip_action = True
                         move_time += time.time() - start_time
                         self.unmute()
-                    except Exception,data:
+                    except Exception:
                         self._agentCrash(agentIndex, quiet=False)
                         self.unmute()
                         return
@@ -682,7 +682,7 @@ class Game:
                         self.unmute()
                         return
                     self.unmute()
-                except Exception,data:
+                except Exception:
                     self._agentCrash(agentIndex)
                     self.unmute()
                     return
@@ -695,7 +695,7 @@ class Game:
             if self.catchExceptions:
                 try:
                     self.state = self.state.generateSuccessor( agentIndex, action )
-                except Exception,data:
+                except Exception:
                     self.mute(agentIndex)
                     self._agentCrash(agentIndex)
                     self.unmute()
@@ -725,7 +725,7 @@ class Game:
                     self.mute(agentIndex)
                     agent.final( self.state )
                     self.unmute()
-                except Exception,data:
+                except Exception:
                     if not self.catchExceptions: raise
                     self._agentCrash(agentIndex)
                     self.unmute()

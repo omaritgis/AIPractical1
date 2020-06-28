@@ -369,19 +369,16 @@ class ExpectimaxAgent(MultiAgentSearchAgent):
       Your expectimax agent (question 4)
     """
     def expectimax_value (self, gameState, agentIndex, nodeDepth):
-
-        "*** YOUR CODE HERE ***"
-        return None
+          # My code here
+          return None
 
     def max_value(self, gameState, agentIndex, nodeDepth):
-
-		"*** YOUR CODE HERE ***"
-		return None
+          
+          return None
 
     def exp_value(self, gameState, agentIndex, nodeDepth):
-
-		"*** YOUR CODE HERE ***"
-		return None
+          
+          return None
 
 
     def getAction(self, gameState):
